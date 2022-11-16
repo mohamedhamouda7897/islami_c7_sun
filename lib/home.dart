@@ -7,6 +7,20 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.red,
+        currentIndex: 2,
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.add), label: '', backgroundColor: Colors.green),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.add), label: '', backgroundColor: Colors.green),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.add), label: '', backgroundColor: Colors.green),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.add), label: '', backgroundColor: Colors.green),
+        ],
+      ),
     );
   }
 }
