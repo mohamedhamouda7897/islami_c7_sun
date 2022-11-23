@@ -16,8 +16,8 @@ class MyThemeData {
           color: colorBlack,
         ),
         subtitle1: TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.normal,
+          fontSize: 25,
+          fontWeight: FontWeight.bold,
           color: colorBlack,
         ),
       ),
