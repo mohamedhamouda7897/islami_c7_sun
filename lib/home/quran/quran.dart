@@ -127,6 +127,19 @@ class QuranTab extends StatelessWidget {
       child: Column(
         children: [
           Image.asset('assets/images/quran_main_bg.png'),
+          Divider(
+            color: MyThemeData.colorGold,
+            thickness: 3,
+          ),
+          Text(
+            'SuraNames',
+            style: Theme.of(context).textTheme.subtitle1,
+            textAlign: TextAlign.center,
+          ),
+          Divider(
+            color: MyThemeData.colorGold,
+            thickness: 3,
+          ),
           Expanded(
             child: ListView.separated(
                 separatorBuilder: (context, index) => Divider(
