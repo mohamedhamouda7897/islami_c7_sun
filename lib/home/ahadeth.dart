@@ -2,6 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_c7_sun/hadeth_details/hadeth_details.dart';
 import 'package:islami_c7_sun/my_theme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+class DataMOdel {
+  String name;
+  String phone;
+  bool isShow;
+
+  DataMOdel(this.name, this.phone, this.isShow);
+}
 
 class AhadethTab extends StatefulWidget {
   @override
@@ -10,6 +19,12 @@ class AhadethTab extends StatefulWidget {
 
 class _AhadethTabState extends State<AhadethTab> {
   List<HadethData> Ahadeth = [];
+
+  List<DataMOdel> data = [
+    DataMOdel('maraim', '02222', false),
+    DataMOdel('salma', '011110', false),
+    DataMOdel('shahd', '022522', false),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +38,11 @@ class _AhadethTabState extends State<AhadethTab> {
           thickness: 3,
         ),
         Text(
-          'Ahadeth',
+          AppLocalizations.of(context)!.ahadeth,
           style: Theme.of(context).textTheme.subtitle1,
           textAlign: TextAlign.center,
         ),
+        Visibility(visible: data[0].isShow, child: Text('taha')),
         Divider(
           color: MyThemeData.colorGold,
           thickness: 3,
